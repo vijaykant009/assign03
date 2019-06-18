@@ -84,12 +84,12 @@ def createTable():
 @app.route('/location', methods=['GET', 'POST'])
 def location():
     lat1 = request.form['lat1']
-    lon1 = request.form['lon1']
+    #lon1 = request.form['lon1']
     lat2 = request.form['lat2']
-    lon2 = request.form['lon2']
+    #lon2 = request.form['lon2']
     cnxn = pyodbc.connect("Driver={ODBC Driver 17 for SQL Server};Server=tcp:azurevijaydb.database.windows.net,1433;Database=Quakes;Uid=vijaykant009@azurevijaydb;Pwd={J@ik@nt009};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;")
     cursor = cnxn.cursor()
-    cursor.execute("Select * from all_month where longitude >= '"+lon1+"' and longitude <= '"+lon2+"' and latitude >='"+lat1+"' and latitude <= '"+lat2+"' ")
+    cursor.execute("Select * from all_month where latitude >='"+lat1+"' and latitude <= '"+lat2+"' ")
     result = cursor.fetchall()
     print(result)
     return render_template("location.html", row=result)

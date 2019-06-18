@@ -26,8 +26,8 @@
 
 <body>
     <div class="container" id="container">
-        <h1>Vijay Kant</h1>
-        <h2>1001676558</h2>
+        <h1>1001676558 Kant, Vijay</h1>
+        
 
 {#        <form action="/uploaddata" method="get" style="padding-bottom: 5px;">#}
 {#            Upload CSV <input type="file" name="file" placeholder="Upload CSV file only">#}
@@ -42,14 +42,28 @@
                 <input type="submit" value="create">
            </form>
            <form action="/randomqueries" method="POST" >
-            Enter maximum magnitude: <input type="text" name="maxmag"><br>
-            Enter minimum magnitude: <input type="text" name="minmag"><br>
+            Enter Latitude1: <input type="text" name="maxmag"><br>
+            Enter Latitude2: <input type="text" name="minmag"><br>
             Enter number of random queries: <input type="text" name="count"><br><br>
 
             <select name="Cache">
                 <option value="1">Use Cache</option>
                 <option value="0">Do not Use Cache</option>
             </select>
+            <input type="submit" value="Search">
+         </form>
+
+
+
+         <form action="/createtable" method="get" style="padding-bottom: 5px;">
+               Create Table with Indices
+               <!-- <input type="number" name="magnitude" width="60" step="any"> -->
+                
+                <input type="submit" value="create">
+           </form>
+           <form action="/location" method="POST" >
+            Enter Latitude1: <input type="text" name="maxmag"><br>
+            Enter Latitude2: <input type="text" name="minmag"><br>
             <input type="submit" value="Search">
          </form>
             <!-- <form action="/randomqueries" method="post" style="padding-bottom: 5px;">
