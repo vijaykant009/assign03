@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello World</title>
+    <title>Quiz 03</title>
 
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -26,8 +26,8 @@
 
 <body>
     <div class="container" id="container">
-        <center><h1>Vijay Kant</h1></center>
-        <center><h2>1001676558</h2></center>
+        <h1>Vijay Kant</h1>
+        <h2>1001676558</h2>
 
 {#        <form action="/uploaddata" method="get" style="padding-bottom: 5px;">#}
 {#            Upload CSV <input type="file" name="file" placeholder="Upload CSV file only">#}
@@ -92,11 +92,11 @@
         <h4 style="font-weight: bold">Time take for First Execution: {{ firstExecutionTime }} ms</h4>
 
         {% if tableData %}
-        <div style="padding: 5px;">
+      <!--   <div style="padding: 5px;">
             Count: {{ tableDataLen }}
             <table border="2">
                 <tr style="font-weight: bold">
-                    <!-- <td>Location</td> -->
+                     <td>Location</td> 
                     <td>Latitude</td>
                     <td>Longitude</td>
                    <td>Magnitude</td>
@@ -104,7 +104,7 @@
                 </tr>
                 {% for data in tableData %}
                     <tr>
-                        <!-- <td>{{ data[0] }}</td> -->
+                         <td>{{ data[0] }}</td> 
                         <td>{{ data.latitude}}</td>
                         <td>{{ data.longitude}}</td>
                         <td>{{ data.mag }}</td>
@@ -131,6 +131,6 @@
             </div>
         {% endif %}
 
-    </div>
+    </div> -->
 </body>
 </html>
