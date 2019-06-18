@@ -42,8 +42,8 @@
                 <input type="submit" value="create">
            </form>
            <form action="/randomqueries" method="POST" >
-            Enter Latitude1: <input type="text" name="maxmag"><br>
-            Enter Latitude2: <input type="text" name="minmag"><br>
+            Enter Latitude1: <input type="text" name="lat1"><br>
+            Enter Latitude2: <input type="text" name="lat2"><br>
             Enter number of random queries: <input type="text" name="count"><br><br>
 
             <select name="Cache">
@@ -103,11 +103,11 @@
 {#            </form>#}
         </div>
 
-      <!--   <h4 style="font-weight: bold">Time take for execution: {{ executionTime }} ms</h4>
+        <h4 style="font-weight: bold">Time take for execution: {{ executionTime }} ms</h4>
         <h4 style="font-weight: bold">Time take for First Execution: {{ firstExecutionTime }} ms</h4>
- -->
+
         {% if tableData %}
-      <!--   <div style="padding: 5px;">
+        <div style="padding: 5px;">
             Count: {{ tableDataLen }}
             <table border="2">
                 <tr style="font-weight: bold">
@@ -146,6 +146,6 @@
             </div>
         {% endif %}
 
-    </div> -->
+    </div> 
 </body>
 </html>
