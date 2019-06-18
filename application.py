@@ -97,8 +97,8 @@ def location():
 
 @app.route('/randomqueries', methods=['GET', 'POST'])
 def randomQueries():
-    magnitudeStart = int(request.form['minmag'])
-    magnitudeEnd = int(request.form['maxmag'])
+    magnitudeStart = int(request.form['lat1'])
+    magnitudeEnd = int(request.form['lat2'])
     noOfQueries = int(request.form['count'])
     withCache = int(request.form['Cache'])
     # noOfQueries = request.form["quer"]
@@ -122,7 +122,7 @@ def randomQueries():
         magnitude_value = round(random.uniform(magnitudeStart, magnitudeEnd), 2)
         print(magnitude_value)
         startTime = time.time()
-        query = "SELECT 'time', latitude, longitude, place, mag FROM all_month WHERE mag = '" + str(magnitude_value) + "'"
+        query = "SELECT 'time', latitude, longitude, place, mag FROM all_month WHERE latitude = '" + str(magnitude_value) + "'"
         cursor.execute(query)
         endTime = time.time()
         # print(query)
@@ -135,7 +135,7 @@ def randomQueries():
             totalExecutionTime = totalExecutionTime + executionTime
             magnitude_value = round(random.uniform(magnitudeStart, magnitudeEnd), 2)
             startTime = time.time()
-            query = "SELECT 'time', latitude , longitude, place, mag FROM all_month WHERE mag = '" + str(magnitude_value) + "'"
+            query = "SELECT 'time', latitude , longitude, place, mag FROM all_month WHERE latitude = '" + str(magnitude_value) + "'"
             cursor.execute(query)
             endTime = time.time()
             list_dict_Data = list(cursor.fetchall())
@@ -162,7 +162,7 @@ def randomQueries():
             print('x')
             print(x)
             magnitude_value = round(random.uniform(magnitudeStart, magnitudeEnd), 2)
-            query = "SELECT 'time', latitude , longitude, place, mag FROM all_month WHERE mag = '" + str(magnitude_value) + "'"
+            query = "SELECT 'time', latitude , longitude, place, mag FROM all_month WHERE latitude = '" + str(magnitude_value) + "'"
             # print("inside else")
             memhash = hashlib.sha256(query.encode()).hexdigest()
             startTime = time.time()
