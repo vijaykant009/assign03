@@ -7,13 +7,10 @@
                 <th>latitude</th>
                 <th>longitude</th>
                 <th>depth</th>
-                <th>mag</th>
-               
+                <th>mag</th>               
                 <th>id</th>
-                 <th>net</th>
-                
-                <th>place</th>
-                
+                 <th>net</th>                
+                <th>place</th>               
 
             </tr>
             {% for row in row %}
@@ -35,11 +32,12 @@
                         {{row.mag}}
                     </td>
                     
-                    <td>
-                        {{row.net}}
-                    </td>
+                    
                     <td>
                         {{row.id}}
+                    </td>
+                    <td>
+                        {{row.net}}
                     </td>
                     
                     <td>
