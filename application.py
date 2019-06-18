@@ -139,23 +139,19 @@ def randomQueries():
             cursor.execute(query)
             endTime = time.time()
             list_dict_Data = list(cursor.fetchall())
-            # print("inside if")
-            # print(lstDictionaryData)
+           
 
             memData = []
             for row in list_dict_Data:
                 memDataDict = dict()
                 for i, val in enumerate(row):
-                    # if type(val) == datetime:
-                    #     val = time.mktime(val.timetuple())
+                   
                     memDataDict[columns[i]] = val
                 memData.append(memDataDict)
             r.set(query, dumps(memData))
 
             executionTime = (endTime - startTime) * 1000
-            # totalExecutionTime = totalExecutionTime + executionTime
-        # print(totalExecutionTime)
-    # with cache
+           
     else:
         print('Cache inside')
         for x in range(noOfQueries):
